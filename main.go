@@ -8,7 +8,7 @@ import (
 	"strconv"
 	"strings"
 
-	"gitlab.com/imei-br/imei-generator/pkg/imei"
+	"github.com/jesusrj/imei-generator/pkg/imei"
 )
 
 func main() {

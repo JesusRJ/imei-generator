@@ -1,3 +1,3 @@
-module gitlab.com/imei-br/imei-generator
+module github.com/jesusrj/imei-generator
 
 go 1.23.2
