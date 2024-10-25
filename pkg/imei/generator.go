@@ -21,13 +21,49 @@ type DeviceMetadata struct {
 // List of available devices with their metadata.
 var devices = []DeviceMetadata{
 	{Brand: "Apple", Model: "iPhone 13", Color: "Black", Memory: "128GB", CPU: "A15 Bionic"},
+	{Brand: "Apple", Model: "iPhone 13", Color: "White", Memory: "256GB", CPU: "A15 Bionic"},
 	{Brand: "Apple", Model: "iPhone 14", Color: "Blue", Memory: "256GB", CPU: "A16 Bionic"},
+	{Brand: "Apple", Model: "iPhone 14 Pro", Color: "Gold", Memory: "512GB", CPU: "A16 Bionic"},
+	{Brand: "Apple", Model: "iPhone 14 Pro", Color: "Purple", Memory: "1TB", CPU: "A16 Bionic"},
+	{Brand: "Apple", Model: "iPhone SE (3rd Gen)", Color: "Red", Memory: "128GB", CPU: "A15 Bionic"},
+
 	{Brand: "Samsung", Model: "Galaxy S22", Color: "White", Memory: "128GB", CPU: "Exynos 2200"},
+	{Brand: "Samsung", Model: "Galaxy S22", Color: "Black", Memory: "256GB", CPU: "Exynos 2200"},
+	{Brand: "Samsung", Model: "Galaxy S22 Ultra", Color: "Green", Memory: "512GB", CPU: "Exynos 2200"},
 	{Brand: "Samsung", Model: "Galaxy Z Flip", Color: "Purple", Memory: "256GB", CPU: "Snapdragon 888"},
-	{Brand: "Xiaomi", Model: "Mi 11", Color: "Gray", Memory: "128GB", CPU: "Snapdragon 888"},
-	{Brand: "OnePlus", Model: "9 Pro", Color: "Green", Memory: "256GB", CPU: "Snapdragon 888"},
+	{Brand: "Samsung", Model: "Galaxy Z Fold 4", Color: "Gray", Memory: "1TB", CPU: "Snapdragon 8 Gen 1"},
+	{Brand: "Samsung", Model: "Galaxy A53", Color: "Blue", Memory: "128GB", CPU: "Exynos 1280"},
+
 	{Brand: "Google", Model: "Pixel 6", Color: "Black", Memory: "128GB", CPU: "Google Tensor"},
+	{Brand: "Google", Model: "Pixel 6", Color: "Coral", Memory: "256GB", CPU: "Google Tensor"},
+	{Brand: "Google", Model: "Pixel 6 Pro", Color: "Gold", Memory: "512GB", CPU: "Google Tensor"},
 	{Brand: "Google", Model: "Pixel 7", Color: "White", Memory: "256GB", CPU: "Google Tensor G2"},
+	{Brand: "Google", Model: "Pixel 7 Pro", Color: "Obsidian", Memory: "512GB", CPU: "Google Tensor G2"},
+
+	{Brand: "OnePlus", Model: "9 Pro", Color: "Green", Memory: "256GB", CPU: "Snapdragon 888"},
+	{Brand: "OnePlus", Model: "9 Pro", Color: "Silver", Memory: "128GB", CPU: "Snapdragon 888"},
+	{Brand: "OnePlus", Model: "10 Pro", Color: "Emerald Green", Memory: "512GB", CPU: "Snapdragon 8 Gen 1"},
+	{Brand: "OnePlus", Model: "10T", Color: "Moonstone Black", Memory: "256GB", CPU: "Snapdragon 8+ Gen 1"},
+
+	{Brand: "Xiaomi", Model: "Mi 11", Color: "Gray", Memory: "128GB", CPU: "Snapdragon 888"},
+	{Brand: "Xiaomi", Model: "Mi 11 Ultra", Color: "Ceramic White", Memory: "512GB", CPU: "Snapdragon 888"},
+	{Brand: "Xiaomi", Model: "Redmi Note 11", Color: "Blue", Memory: "128GB", CPU: "Snapdragon 680"},
+	{Brand: "Xiaomi", Model: "Redmi Note 11 Pro", Color: "Graphite Gray", Memory: "256GB", CPU: "Snapdragon 695"},
+	{Brand: "Xiaomi", Model: "Poco X4 Pro", Color: "Yellow", Memory: "256GB", CPU: "Snapdragon 695"},
+
+	{Brand: "Huawei", Model: "P50 Pro", Color: "Gold", Memory: "512GB", CPU: "Kirin 9000"},
+	{Brand: "Huawei", Model: "Mate 40 Pro", Color: "Black", Memory: "256GB", CPU: "Kirin 9000"},
+	{Brand: "Huawei", Model: "P40", Color: "Silver Frost", Memory: "128GB", CPU: "Kirin 990 5G"},
+
+	{Brand: "Sony", Model: "Xperia 1 III", Color: "Frosted Black", Memory: "256GB", CPU: "Snapdragon 888"},
+	{Brand: "Sony", Model: "Xperia 5 III", Color: "Green", Memory: "128GB", CPU: "Snapdragon 888"},
+
+	{Brand: "Oppo", Model: "Find X5 Pro", Color: "Black", Memory: "512GB", CPU: "Snapdragon 8 Gen 1"},
+	{Brand: "Oppo", Model: "Reno7", Color: "Aurora", Memory: "128GB", CPU: "Snapdragon 778G"},
+
+	{Brand: "Motorola", Model: "Edge 30 Pro", Color: "Blue", Memory: "256GB", CPU: "Snapdragon 8 Gen 1"},
+	{Brand: "Motorola", Model: "Moto G Stylus", Color: "Twilight Blue", Memory: "128GB", CPU: "MediaTek Helio G88"},
+	{Brand: "Motorola", Model: "Moto G Power", Color: "Steel Blue", Memory: "64GB", CPU: "Snapdragon 662"},
 }
 
 // Calculate the Luhn checksum for a number string.
