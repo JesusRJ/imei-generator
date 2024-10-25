@@ -1,10 +1,10 @@
 # Gerador de IMEIs com Metadados
 
-Este projeto foi desenvolvido para gerar números de IMEI (Identificação Internacional de Equipamento Móvel) válidos, além de fornecer metadados relacionados a dispositivos móveis, como marca, modelo, cor, memória e CPU. O gerador permite que o usuário forneça uma parte do número IMEI (TAC e serial parcial), e então gera IMEIs válidos usando o [algoritmo de Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm) como verificação. O projeto é modular, podendo ser utilizado tanto como uma aplicação de linha de comando quanto como uma biblioteca em outros projetos.
+Este projeto foi desenvolvido para gerar números de [**IMEI (International Mobile Equipment Identity)**](https://en.wikipedia.org/wiki/International_Mobile_Equipment_Identity) válidos, além de fornecer metadados relacionados a dispositivos móveis, como marca, modelo, cor, memória e CPU. O gerador permite que o usuário forneça uma parte do número IMEI (TAC e serial parcial), e então gera IMEIs válidos usando o [algoritmo de Luhn](https://en.wikipedia.org/wiki/Luhn_algorithm) como verificação. O projeto é modular, podendo ser utilizado tanto como uma aplicação de linha de comando quanto como uma biblioteca em outros projetos.
 
 ## O que é um Código IMEI?
 
-O [**IMEI (International Mobile Equipment Identity)**](https://en.wikipedia.org/wiki/International_Mobile_Equipment_Identity) é um número exclusivo que identifica dispositivos móveis em redes celulares. Ele possui 15 dígitos e é usado pelos operadores de redes para verificar a validade dos dispositivos e, se necessário, bloquear aparelhos roubados ou inválidos. O IMEI é dividido em três partes principais:
+O [**IMEI**](https://en.wikipedia.org/wiki/International_Mobile_Equipment_Identity) é um número exclusivo que identifica dispositivos móveis em redes celulares. Ele possui 15 dígitos e é usado pelos operadores de redes para verificar a validade dos dispositivos e, se necessário, bloquear aparelhos roubados ou inválidos. O IMEI é dividido em três partes principais:
 
 1. **TAC (Type Allocation Code)**: Composto pelos primeiros 8 dígitos, identifica o fabricante e o modelo do dispositivo.
 2. **Número de Série**: Composto pelos 6 dígitos seguintes, que são únicos para cada dispositivo fabricado.
