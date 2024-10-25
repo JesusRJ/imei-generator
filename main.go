@@ -1,45 +1,16 @@
+// main.go
 package main
 
 import (
 	"bufio"
 	"fmt"
-	"math/rand"
 	"os"
 	"strconv"
 	"strings"
-	"time"
+
+	"gitlab.com/imei-br/imei-generator/pkg/imei"
 )
 
-// Calculate the Luhn checksum for a number string.
-func checksum(number string) int {
-	sum := 0
-	nDigits := len(number)
-	parity := nDigits % 2
-
-	for i := 0; i < nDigits; i++ {
-		digit, _ := strconv.Atoi(string(number[i]))
-		if i%2 == parity {
-			digit *= 2
-		}
-		if digit > 9 {
-			digit -= 9
-		}
-		sum += digit
-	}
-
-	return sum % 10
-}
-
-// Calculate the check digit using the Luhn algorithm.
-func calcCheckDigit(number string) string {
-	checksumValue := checksum(number + "0")
-	if checksumValue == 0 {
-		return "0"
-	}
-	return strconv.Itoa(10 - checksumValue)
-}
-
-// Ask for input and generate random IMEI numbers.
 func main() {
 	reader := bufio.NewReader(os.Stdin)
 
@@ -72,22 +43,16 @@ func main() {
 		fmt.Println("*** Invalid input: you must enter a number greater than zero")
 	}
 
-	// Generate random IMEI numbers.
-	fmt.Println("")
-	rand.Seed(time.Now().UnixNano())
-
-	for i := 0; i < count; i++ {
-		imei := start
-
-		// Randomly generate the remaining digits to make the length 14.
-		for len(imei) < 14 {
-			imei += strconv.Itoa(rand.Intn(10))
-		}
-
-		// Calculate and append the check digit.
-		imei += calcCheckDigit(imei)
-		fmt.Println(imei)
+	// Generate and print IMEI numbers using the imei package.
+	devices, err := imei.GenerateIMEIs(start, count)
+	if err != nil {
+		fmt.Println("Error generating IMEIs:", err)
+		return
 	}
 
-	fmt.Println("")
+	// Print the generated IMEIs with their metadata.
+	for _, device := range devices {
+		fmt.Printf("IMEI: %s\nBrand: %s\nModel: %s\nColor: %s\nMemory: %s\nCPU: %s\n\n",
+			device.IMEI, device.Brand, device.Model, device.Color, device.Memory, device.CPU)
+	}
 }
